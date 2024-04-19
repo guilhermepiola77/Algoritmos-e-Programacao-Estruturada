@@ -9,9 +9,14 @@ def encontrar_maior(num1, num2):
     else:
         print("Números iguais")
 
+
+        kkkkkkk
+
 # Solicita ao usuário para inserir os números
 numero1 = float(input("Digite o primeiro número: "))
-numero2 = float(input("Digite o segundo número: "))
+numero2 = float(input("Digite o  segundo número: "))
 
 # Chama a função para encontrar o maior número
 encontrar_maior(numero1, numero2)
+
+
