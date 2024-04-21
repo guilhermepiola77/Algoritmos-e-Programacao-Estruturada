@@ -13,4 +13,3 @@ if numero >= 0:
 else:
     
     print("O número é inválido. Por favor, forneça um número positivo.")
-    

@@ -14,9 +14,7 @@ def encontrar_maior_e_diferenca(num1, num2):
     
     print(f"O maior número é {maior} e a diferença entre eles é {diferenca}.")
 
-# Solicita ao usuário para inserir os números
 numero1 = int(input("Digite o primeiro número inteiro: "))
 numero2 = int(input("Digite o segundo número inteiro: "))
 
 encontrar_maior_e_diferenca(numero1, numero2)
-    

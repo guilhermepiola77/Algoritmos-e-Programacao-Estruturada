@@ -9,4 +9,3 @@ else:
     print("O numero é impar: ")
 
 print("O resultado é:{}".format(numero,resultado))
-

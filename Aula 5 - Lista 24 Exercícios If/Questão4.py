@@ -19,5 +19,3 @@ def calculadora_numero_positivo(numero):
 numero = float(input("Digite um número: "))
 
 calculadora_numero_positivo(numero)
-
-
