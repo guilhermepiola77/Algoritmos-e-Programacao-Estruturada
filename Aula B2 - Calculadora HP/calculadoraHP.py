@@ -61,3 +61,44 @@ while True:
             
         case _:
             print("Opção inválida, tente novamente.")
+
+
+            
+            #                             Conclusão
+            # Primeiramente foi utilizado o "while true", que permite ao usuário uma escolha
+            # até a opção de sair.
+
+            # Em seguida é pedido para o usuário escolher uma das 4 operações matemáticas.
+
+            # Utilizado "match opcao.uper" para que independente que o usuário escreva, saia em maiusculas
+            # a escrita todas as vezes.
+
+            # Utilizado "soma = 0.0 para que a soma seja iniciada apartir do 0."
+
+            # Em seguida é solicitado ao usuário digitar um número ou P para parar, caso o usuário
+            # utilize o P, sairá do loop.
+
+            # Soma += serve para mostrar o resultado da "soma", serve para as outras operações também,
+            # exceto a de subtração, invez do 0.0, utilizei o none, pois estava utilizando o também
+            # e o resultado da subtração estava dando como um resultado da "soma" porém negativo,
+            # exemplo: 5-5 = -10, alterei para none, pois é utilizado para variaveis sem valor 
+            # atribuido.
+
+            # E na operaçao de divisão foi utilizado o "if" == 0.0, que se o usuário utilizar 
+            # 0 para a operação, um erro avisará que não é possivel realizar a divisão e assim
+            # retornado para a tela inicial novamente.
+
+            # Utilizado "break e continue" em cada case, seguindo o mesmo fundamento para todos.
+
+            # No final da linha de código, utilizado o case "X", para que se usuário digitar o "X"
+            # irá sair do loop principal e encerrando o programa, no caso o "break".
+
+            # Utilizado "case _", se o usuário digitar alguma opção que seja inválida, irá exibir
+            # uma mensagem de erro. 
+
+
+
+        
+
+
+        
