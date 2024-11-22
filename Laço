@@ -1,0 +1,13 @@
+problemSize = 100000
+iteracoes = 0 
+while problemSize > 0:
+    iteracoes += 1
+    problemSize = problemSize // 2 
+    print (f"Iteração N° {iteracoes}: ", problemSize)
+
+print ("Quantidade de Iterações ", iteracoes)
+
+
+
+
+

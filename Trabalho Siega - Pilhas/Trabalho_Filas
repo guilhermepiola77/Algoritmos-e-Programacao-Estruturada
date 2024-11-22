@@ -1,0 +1,75 @@
+from collections import deque
+
+fila_critico = deque()
+fila_grave = deque()
+fila_leve = deque()
+
+def agendar_atendimento():
+    nome = input("Digite o nome do paciente: ")
+    enfermidade = input("Informe o grau da enfermidade (critico, grave, leve): ").strip().lower()
+
+    if enfermidade == "critico":
+        fila_critico.append(nome)
+    elif enfermidade == "grave":
+        fila_grave.append(nome)
+    elif enfermidade == "leve":
+        fila_leve.append(nome)
+    else:
+        print("Enfermidade inválida, tente novamente.")
+        return
+
+    print(f"Paciente {nome} foi agendado com prioridade '{enfermidade.title()}'.")
+
+def chamar_proximo_paciente():
+    if fila_critico:
+        print(f"Chamando paciente: {fila_critico.popleft()} (Critico)")
+    elif fila_grave:
+        print(f"Chamando paciente: {fila_grave.popleft()} (Grave)")
+    elif fila_leve:
+        print(f"Chamando paciente: {fila_leve.popleft()} (Leve)")
+    else:
+        print("Nenhum paciente na fila.")
+
+def excluir_agendamentos():
+    if not (fila_critico or fila_grave or fila_leve):
+        print("Nenhum agendamento encontrado para excluir.")
+        return
+
+    print("Excluindo todos os agendamentos...")
+    print("Pacientes não atendidos:")
+    for paciente in fila_critico:
+        print(f"{paciente} (Critico)")
+    for paciente in fila_grave:
+        print(f"{paciente} (Grave)")
+    for paciente in fila_leve:
+        print(f"{paciente} (Leve)")
+
+    fila_critico.clear()
+    fila_grave.clear()
+    fila_leve.clear()
+
+def menu():
+    while True:
+        print("\nMenu:")
+        print("1 – Agendar atendimento")
+        print("2 – Chamar próximo paciente")
+        print("3 – Excluir agendamentos")
+        print("4 – Sair do programa")
+        opcao = input("Escolha uma opção: ")
+
+        if opcao == "1":
+            agendar_atendimento()
+        elif opcao == "2":
+            chamar_proximo_paciente()
+        elif opcao == "3":
+            excluir_agendamentos()
+        elif opcao == "4":
+            print("Finalizando o programa.")
+            break
+        else:
+            print("Opção inválida, tente novamente.")
+
+menu()
+
+
+
